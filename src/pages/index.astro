@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/layouts.astro';
+import Stats from '../components/stats.astro';
+import GradientBlinds from '../components/GradientBlinds/GradientBlinds';
+---
+<Layout title="Home">
+  <section class="hero-gradient text-white relative overflow-hidden min-h-screen flex items-center bg-gray-900">
+    <div class="absolute inset-0 z-0">
+      <GradientBlinds
+        className=""
+        dpr={typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1}
+        gradientColors={['#FF9FFC', '#5227FF']}
+        angle={0}
+        noise={0.3}
+        blindCount={12}
+        blindMinWidth={50}
+        spotlightRadius={0.5}
+        spotlightSoftness={1}
+        spotlightOpacity={1}
+        mouseDampening={0.15}
+        distortAmount={0}
+        shineDirection="left"
+        client:only="react"
+      />
+    </div>
+
+    <div class="container mx-auto px-6 py-24 md:py-32 relative z-10 pointer-events-none">
+      <div class="max-w-3xl backdrop-blur-sm bg-white/10 p-8 rounded-3xl shadow-xl border border-white/20 animate-fade-in">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+          Premium Steel Solutions for Bangladesh
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-80">
+          Hossain Exim International - Your trusted partner for high-quality imported steel products since 2000.
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pointer-events-auto">
+          <a href="/contact" class="bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105">
+            Get a Quote
+          </a>
+          <a href="/products" class="border-2 border-pink-500 text-pink-400 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 text-center transform hover:scale-105 shadow-md hover:shadow-lg">
+            Our Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Stats />
+</Layout>

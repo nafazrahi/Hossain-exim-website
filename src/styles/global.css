@@ -1,0 +1,53 @@
+/* Removed Tailwind directives for plain CSS compatibility */
+/* If using Tailwind, process this file with PostCSS or Tailwind CLI */
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero-gradient {
+  .hero-gradient {
+  background-color: #1f2937;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjNDQ0NDQ0Ij48L3JlY3Q+PC9zdmc+');
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+}
+
+.steel-texture {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiPgo8cmVjdCB3aWR0aD0iNiIgaGVpZ2h0PSI2IiBmaWxsPSIjMDAwMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDZMNiAwWk02IDZMMCAwWiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxMTExMTEiPjwvcGF0aD4KPC9zdmc+');
+  opacity: 0.03;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width .3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+@keyframes pulse-slow {
+  0%,100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.05); }
+}
+.animate-pulse-slow { animation: pulse-slow 6s ease-in-out infinite; }
+@keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+.animate-fade-in { animation: fade-in 1s ease forwards; }

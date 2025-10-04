@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/layouts.astro';
+import ServiceCard from '../components/servicecard.astro';
+---
+<Layout title="Services">
+  <section class="py-20 bg-gray-900 text-gray-300">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ServiceCard
+          title="Steel Import"
+          description="Sourcing high-quality steel products from global manufacturers with a focus on durability and performance."
+          icon="fas fa-truck"
+        />
+        <ServiceCard
+          title="Custom Fabrication"
+          description="Offering tailored steel fabrication services to meet the precise specifications of your unique projects."
+          icon="fas fa-tools"
+        />
+        <ServiceCard
+          title="Delivery Services"
+          description="Ensuring reliable and timely delivery of materials with our robust logistics network across Bangladesh."
+          icon="fas fa-shipping-fast"
+        />
+        </div>
+    </div>
+  </section>
+</Layout>

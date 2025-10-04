@@ -1,0 +1,47 @@
+---
+import Navbar from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
+import GradientBlinds from '../components/GradientBlinds/GradientBlinds';
+import '../styles/global.css';
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-300 antialiased overflow-x-hidden">
+    <div class="fixed inset-0 z-[-10]">
+      <GradientBlinds
+        className=""
+        dpr={typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1}
+        gradientColors={['#FF9FFC', '#5227FF']}
+        angle={0}
+        noise={0.3}
+        blindCount={12}
+        blindMinWidth={50}
+        spotlightRadius={0.5}
+        spotlightSoftness={1}
+        spotlightOpacity={1}
+        mouseDampening={0.15}
+        distortAmount={0}
+        shineDirection="left"
+        client:only="react"
+      />
+    </div>
+
+    <Navbar />
+
+    <main class="pt-16">
+        <slot />
+    </main>
+
+    <Footer />
+    
+    <script src="/src/scripts/menu.js"></script>
+</body>
+</html>
